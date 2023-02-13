@@ -19,6 +19,7 @@ import MobileMenu from "components/navbar/MobileMenu";
 import { FlexBetween, FlexBox } from "components/flex-box";
 import CategoryMenu from "components/categories/CategoryMenu";
 import ShoppingBagOutlined from "components/icons/ShoppingBagOutlined";
+import { Tab } from '@headlessui/react'
 
 // styled component
 export const HeaderWrapper = styled(Box)(({
@@ -186,6 +187,20 @@ const Header = ({
         {/* LOGIN FORM DIALOG AND CART SIDE BAR  */}
         {DIALOG_DRAWER}
       </StyledContainer>
+      <div className="w-full max-w-md px-2 py-16 sm:px-0">
+        <Tab.Group>
+          <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+            <Tab>Tab 1</Tab>
+            <Tab>Tab 2</Tab>
+            <Tab>Tab 3</Tab>
+          </Tab.List>
+          <Tab.Panels>
+            <Tab.Panel>Content 1</Tab.Panel>
+            <Tab.Panel>Content 2</Tab.Panel>
+            <Tab.Panel>Content 3</Tab.Panel>
+          </Tab.Panels>
+        </Tab.Group>
+      </div>
     </HeaderWrapper>;
 };
 export default Header;

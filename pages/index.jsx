@@ -22,6 +22,9 @@ const MarketShop = props => {
   return <ShopLayout1>
       <SEO title="Market v1" />
 
+      {/* CATEGORIES */}
+      <Section10 categories={props.bottomCategories} />
+
       {/* HERO SLIDER SECTION */}
       <Section1 carouselData={props.mainCarouselData} />
 
@@ -51,9 +54,6 @@ const MarketShop = props => {
 
       {/* OPTICS / WATHCH */}
       <Section7 title="Optics / Watch" shops={props.opticsShops} brands={props.opticsBrands} productList={props.opticsList} />
-
-      {/* CATEGORIES */}
-      <Section10 categories={props.bottomCategories} />
 
       {/* MORE FOR YOU */}
       <Section11 moreItems={props.moreItems} />
